@@ -11,7 +11,7 @@ const App = () => {
   const [rates, setRates] = useState({});
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/api/rates/${base}`)
+    axios.get(`https://react-currency-converter-backend.onrender.com/api/rates/${base}`)
       .then(res => {
         setRates(res.data.conversion_rates);
         setCurrencies(Object.keys(res.data.conversion_rates));
